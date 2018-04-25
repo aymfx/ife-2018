@@ -8,7 +8,7 @@
 ### 零基础学院
 > 第一天：为什么有那么多人要做前端？   代码地址: https://codepen.io/aymfx/pen/ZoOzoP
 
-> 第二天：给自己做一个在线简历吧     代码地址: 
+> 第二天：给自己做一个在线简历吧     代码地址:http://www.aymfx.cn/ife-2018/resume/index.html
 
 ### MVVM学院
 
