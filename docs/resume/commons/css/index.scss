@@ -1,3 +1,141 @@
-body{
-    background: #f99;
+@mixin wh($w:100%,$h:100%){
+    width: $w;
+    height: $h;
+}
+html,body{
+   @include wh();
+    background: rgb(104, 192, 226);
+    color: #f99;
+    overflow: hidden;
+
+}
+.h1{
+        font-size: 42px;
+        margin-top:20px;
+        font-weight: 700;
+    }
+#introduction,#project,#technology{
+    text-align: center;
+    overflow: hidden;
+    @include wh();
+}
+#introduction{
+    
+    h1{
+       @extend .h1;
+       color: aqua;
+       text-shadow: 1px 2px #22c3aa, 2px 4px #aee2d9;
+    }
+    
+    .myhead{
+        @include wh(150px,150px);
+        margin: 40px auto 0;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    h2{
+        font-size: 42px;
+        text-shadow: 1px 2px #e7e406, 2px 4px #0941db;
+    }
+    .title{
+        color: #00f;
+        margin: 15px 10px;
+        font-size: 18px;
+        line-height: 36px；
+    }
+    .subtitle{
+        line-height: 36px;
+        color: aqua;
+        font-size: 18px;
+        a{
+            text-decoration: underline;
+        }
+    }
+    
+}
+.btn{
+        position: fixed;
+         @include wh(200px,50px);
+         left: 50%;
+         bottom: 10%;
+         transform: translateX(-50%);
+         display:flex;
+         display:-webkit-flex;
+         justify-content: space-around;
+         -webkit-justify-content: space-around;
+         z-index: 999;
+         a{
+             border: 1px solid #e7e406;
+             display: block;
+             @include wh(30px,30px);
+             text-align: center;
+             line-height: 30px;
+             border-radius: 50%;
+             cursor: pointer;
+            
+         }
+    }
+
+#project{
+    h1{
+        @extend .h1;
+        color: antiquewhitwe;
+        text-shadow: 1px 2px #10db32, 2px 4px #4c74bd;
+    }
+    ul{
+        width: 840px;
+        margin: 30px auto;
+        display:flex;
+         display:-webkit-flex;
+         justify-content: space-around;
+         -webkit-justify-content: space-around;
+         flex-wrap: wrap;
+         -webkit-flex-wrap: wrap;
+         li{
+             width: 300px;
+             h2{
+                 color: #fff;
+                 font-size: 24px;
+                 line-height: 32px;
+                 text-align: left;
+                 margin-bottom: 12px;
+                 height: 60px;
+             }
+             p{
+                 color: #ddd;
+                 text-align: left;
+                 span{
+                     color: #e7e406;
+                 }
+             }
+         }
+    }
+}
+
+#technology{
+    h1{
+       @extend .h1;
+       color: #fff;
+       text-shadow: 1px 2px #22c3aa, 2px 4px #aee2d9;
+    }
+    .main{
+        width: 840px;
+        margin: 30px auto;
+        display:flex;
+         display:-webkit-flex;
+         justify-content: space-around;
+         -webkit-justify-content: space-around;
+         flex-wrap: wrap;
+         -webkit-flex-wrap: wrap;
+    }
+    dl{
+       dt{
+            color: #fff;
+            margin-bottom: 20px;
+       }
+       dd{
+           margin:0 0 10px 0px;
+           color: #e7e406;
+       }
+    }
 }
