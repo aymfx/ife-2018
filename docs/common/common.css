@@ -1,0 +1,315 @@
+@charset "UTF-8";
+html {
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	text-size-adjust: none;
+	/*解决chrome浏览器下字体不能小于12px*/
+	font-size: .24rem;
+}
+
+body {
+	font-size: .24rem;
+	overflow-x: auto;
+	font-size: 14px;
+	color: #333;
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+html {
+	zoom: 1;
+}
+
+html * {
+	outline: 0;
+	zoom: 1;
+}
+
+html button::-moz-focus-inner {
+	border-color: transparent !important;
+}
+
+/*设置margin和padding为0*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+a img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var，i {
+	font-style: normal;
+	font-weight: normal;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type=date],
+button,
+select,
+input[type=text] {
+	/*去掉苹果的默认UI来渲染按钮 、解决部分手机浏览器对border：none无效办法*/
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/*去掉微信端input-text在ios轻快下的点击出先黑色半透明背景*/
+	tap-highlight-color: transparent !important;
+}
+
+a,
+input[type=text],
+select,
+input[type=password],
+textarea,
+div {
+	/*去掉微信端input-text在ios轻快下的点击出先黑色半透明背景*/
+	tap-highlight-color: transparent !important;
+}
+
+input::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+img {
+	display: block;
+}
+
+div,
+a,
+img {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+/*弹窗组件*/
+
+.NV_mask {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9999;
+}
+
+.NV_mask .NV_content {
+	vertical-align: middle;
+	width: 54%;
+	position: absolute;
+	left: 24%;
+	top: 50%;
+	z-index: 999;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.NV_mask .NV_content .scaleIn {
+	background-color: #0a032d;
+	border-radius: 0.2rem;
+	padding: 0.4rem;
+	position: relative;
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+.NV_mask .NV_content .NV_title {
+	font-size: 0.36rem;
+	color: #666;
+	padding-bottom: 0.2rem;
+	margin: 0 0.2rem;
+	border-bottom: 2px dashed #efefef;
+}
+
+.NV_mask .NV_content .NV_text {
+	margin-bottom: 0.3rem;
+	font-size: 0.25rem;
+	line-height: 0.32rem;
+	color: #FFF;
+	text-align: center;
+}
+
+.NV_mask .NV_content .NV_btnArea {
+	margin-top: 0.51rem;
+}
+
+.NV_mask .NV_content .NV_btnArea a {
+	font-size: 0.5rem;
+}
+
+.NV_mask .NV_content .NVbtnArea a.btn1 {
+	display: inline-block;
+	width: 2.2rem;
+	text-align: center;
+	height: 0.65rem;
+	margin: 0 0.2rem;
+	line-height: 0.65rem;
+	font-size: 0.46rem;
+}
+
+.NV_mask .NV_content .NVbtnArea a.btn1.done {
+	color: #fff;
+	background-color: #4b38ab;
+	border-radius: 0.15rem;
+	font-size: 0.4rem;
+	margin-left: .5rem;
+}
+
+.NV_mask .NV_content .NVbtnArea a.btn1.cancel {
+	color: #bdbdbc;
+	background-color: #dddddc;
+	border-radius: 0.15rem;
+	box-shadow: 0 0.03rem #bdbdbc, 0 0.05rem #ccc;
+}
+
+/*自定义alert和confirm*/
+
+.__tips_mask,
+.__tips_mask1 {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	box-sizing: border-box;
+	color: #666;
+	z-index: 99990999999;
+}
+
+.__tips_mask>.__tips,
+.__tips_mask1>.__tips {
+	width: 5rem;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	margin-left: -2.5rem;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.__tips_mask>.__tips>.__content,
+.__tips_mask1>.__tips>.__content {
+	padding: 20px 10px;
+	border-bottom: 1px solid #7d7575;
+	word-break: break-all;
+	font-size: .3rem;
+	color: #666;
+	line-height: 1.0rem;
+}
+
+.__tips_mask>.__tips>.__btm,
+.__tips_mask1>.__tips>.__btm {
+	height: .6rem;
+	line-height: .6rem;
+}
+
+.__tips_mask>.__tips>.__btm>a,
+.__tips_mask1>.__tips>.__btm>a {
+	display: block;
+	height: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	color: #666;
+	text-decoration: none;
+	font-size: .3rem;
+}
+
+.__tips_mask>.__tips>.__btm>a.half,
+.__tips_mask1>.__tips>.__btm>a.half {
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.__tips_mask>.__tips>.__btm>a.half:first-child,
+.__tips_mask1>.__tips>.__btm>a.half:first-child {
+	border-right: 1px solid #eee;
+}
+
+/* 新弹窗 */
