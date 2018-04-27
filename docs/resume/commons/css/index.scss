@@ -2,6 +2,10 @@
     width: $w;
     height: $h;
 }
+@mixin cf($c,$f){
+    color: $c;
+    font-size: $f;
+}
 html,body{
    @include wh();
     background: rgb(104, 192, 226);
@@ -11,16 +15,19 @@ html,body{
 }
 .h1{
         font-size: 42px;
-        margin-top:20px;
+        margin-top:220px;
         font-weight: 700;
     }
-#introduction,#project,#technology{
+#introduction,
+#project,
+#technology,
+#myself{
     text-align: center;
     overflow: hidden;
     @include wh();
 }
 #introduction{
-    
+    background: #10db32;
     h1{
        @extend .h1;
        color: aqua;
@@ -49,6 +56,21 @@ html,body{
         font-size: 18px;
         a{
             text-decoration: underline;
+            &:link {
+                color: #0f0;
+            }
+
+            &:visited {
+                color: #fff;
+            }
+
+            &:hover {
+                color: lightgreen;
+            }
+
+            &:active {
+                color: #99f;
+            }
         }
     }
     
@@ -70,13 +92,26 @@ html,body{
              @include wh(30px,30px);
              text-align: center;
              line-height: 30px;
-             border-radius: 50%;
+             border-radius: 50%; 
              cursor: pointer;
-            
+             &:link{
+                 color: #0f0;
+             }
+             &:visited {
+                 color: #fff;
+             }
+             &:hover{
+                 color: lightgreen;
+             }
+             &:active{
+                 color: #99f;
+             }
+             
          }
     }
 
 #project{
+    background: rgb(84, 131, 235);
     h1{
         @extend .h1;
         color: antiquewhitwe;
@@ -138,4 +173,30 @@ html,body{
            color: #e7e406;
        }
     }
+}
+
+#myself {
+    background: #99f;
+    h1 {
+        @extend .h1;
+        font-size: 48px;
+        color: #fff;
+        text-shadow: 1px 2px #22c3aa, 2px 4px #aee2d9;
+    }
+    main{
+        margin:  30px auto 0;
+        .phone{
+             @include cf(#fff,28px);
+             margin: 20px auto 0;
+        }
+        .mail{
+            @extend .phone;
+            color: #008a75;
+        }
+        .xueli{
+           @extend .phone;
+           color: #aee2d9;
+        }
+    }
+
 }
