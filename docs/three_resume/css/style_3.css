@@ -1,0 +1,108 @@
+/* reset */
+html, body {
+  padding: 0;
+  margin: 0; }
+
+/* mixin */
+nav.nav {
+  position: fixed;
+  right: 230px;
+  top: 80px;
+  padding: 10px;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.08); }
+  nav.nav a {
+    display: block;
+    margin: 10px 0;
+    color: #f6f;
+    cursor: pointer; }
+    nav.nav a:link {
+      color: #0fdd0f; }
+    nav.nav a:visited {
+      color: #df133f; }
+    nav.nav a:hover {
+      color: lawngreen; }
+    nav.nav a:active {
+      color: #271cc5; }
+    nav.nav a .active {
+      color: lavender; }
+
+html,
+body {
+  background: #f0f0f0; }
+
+.warp {
+  width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.08);
+  background: #fff; }
+
+header {
+  height: 100px;
+  background: #666666; }
+  header h1 {
+    color: #000;
+    font-size: 30px;
+    line-height: 100px;
+    color: #fff;
+    padding-left: 12px; }
+
+main section:after {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  visibility: hidden; }
+
+main h2 {
+  color: #000;
+  font-size: 15px;
+  margin: 0;
+  float: left;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  background: #cccccc;
+  border-bottom: 1px solid #fff; }
+
+main article {
+  float: left;
+  height: 150px;
+  overflow: hidden; }
+
+main .block {
+  border-top: 1px solid #cccccc; }
+
+main .float-line {
+  padding: 10px;
+  box-sizing: border-box; }
+  main .float-line:after {
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    visibility: hidden; }
+  main .float-line div {
+    float: left;
+    margin-right: 10px;
+    font-weight: 700;
+    color: #000;
+    font-size: 16px; }
+    main .float-line div span {
+      color: #040302;
+      font-size: 12px; }
+    main .float-line div a {
+      color: #040302;
+      font-size: 12px; }
+
+main .no-float h3 {
+  margin: 10px;
+  padding: 0; }
+
+main .no-float p {
+  color: #040302;
+  font-size: 12px;
+  margin-left: 10px;
+  padding: 0; }

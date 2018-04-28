@@ -1,0 +1,90 @@
+@import '../../../common/mixin.scss';
+html,
+body {
+    background: #f0f0f0;
+}
+
+.warp {
+    width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, .08);
+    background: #fff;
+}
+
+header {
+    h1 {
+        @include cf( #000, 30px);
+        line-height: 100px;
+        color: #fff;
+        padding-left: 12px;
+    }
+    height: 100px;
+    background: #666666;
+}
+
+main {
+    section:after {
+        content: '';
+        display: block;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+        visibility: hidden;
+    }
+    h2 {
+        @include cf( #000, 15px);
+        margin:0;
+        float: left;
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+        background: #cccccc;
+        border-bottom: 1px solid #fff;
+    }
+    article{
+        float: left;
+        height: 150px;
+        overflow: hidden;
+        
+    }
+    .block{
+        border-top: 1px solid #cccccc;
+    }
+    .float-line {
+        &:after {
+            content: '';
+            display: block;
+            height: 0;
+            overflow: hidden;
+            clear: both;
+            visibility: hidden;
+        }
+        padding: 10px;
+        box-sizing: border-box;
+        div {
+            float: left;
+            margin-right: 10px;
+            font-weight: 700;
+            @include cf( #000, 16px);
+            span {
+                @include cf( #040302, 12px);
+            }
+            a{
+                @include cf( #040302, 12px);
+            
+            }
+        }
+    }
+    .no-float{
+        h3{
+             margin: 10px;
+             padding: 0
+        }
+        p {
+            @include cf( #040302, 12px);
+            margin-left: 10px;
+            padding: 0
+        }
+    }
+}

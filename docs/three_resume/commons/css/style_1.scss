@@ -1,0 +1,50 @@
+@import '../../../common/mixin.scss';
+html,
+body {
+    background: #f0f0f0;
+}
+
+.warp {
+    width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, .08);
+    background: #fff;
+    padding: 20px 0;
+}
+
+header {
+    h1 {
+        @include cf( #000, 30px)
+    }
+}
+
+main {
+    h2 {
+        @include cf( #000, 26px);
+        margin: 15px 0;
+    }
+    .float-line {
+        &:after {
+            content: '';
+            display: block;
+            height: 0;
+            overflow: hidden;
+            clear: both;
+            visibility: hidden;
+        }
+        div {
+            float: left;
+            margin-right: 10px;
+            @include cf( #000, 18px);
+            span {
+                @include cf( #040302, 18px);
+            }
+        }
+    }
+    .no-float {
+        p {
+            @include cf( #040302, 18px);
+        }
+    } 
+}
+

@@ -1,0 +1,68 @@
+/* reset */
+html, body {
+  padding: 0;
+  margin: 0; }
+
+/* mixin */
+nav.nav {
+  position: fixed;
+  right: 230px;
+  top: 80px;
+  padding: 10px;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.08); }
+  nav.nav a {
+    display: block;
+    margin: 10px 0;
+    color: #f6f;
+    cursor: pointer; }
+    nav.nav a:link {
+      color: #0fdd0f; }
+    nav.nav a:visited {
+      color: #df133f; }
+    nav.nav a:hover {
+      color: lawngreen; }
+    nav.nav a:active {
+      color: #271cc5; }
+    nav.nav a .active {
+      color: lavender; }
+
+html,
+body {
+  background: #f0f0f0; }
+
+.warp {
+  width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  padding: 20px 0; }
+
+header h1 {
+  color: #000;
+  font-size: 30px; }
+
+main h2 {
+  color: #000;
+  font-size: 26px;
+  margin: 15px 0; }
+
+main .float-line:after {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  visibility: hidden; }
+
+main .float-line div {
+  float: left;
+  margin-right: 10px;
+  color: #000;
+  font-size: 18px; }
+  main .float-line div span {
+    color: #040302;
+    font-size: 18px; }
+
+main .no-float p {
+  color: #040302;
+  font-size: 18px; }
