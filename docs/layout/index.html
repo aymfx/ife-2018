@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>布局</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <nav>
+        <a href="./index.html">常用布局</a>
+        <a href="./layout.html">设计稿作品</a>
+    </nav>
+    <h1>
+        常用的几种布局
+    </h1>
+    <h3>
+         1.实现一个两栏布局，左侧占30%宽度，右侧占70%宽度
+    </h3>
+    <section class="demo1 clearfix">
+        <div class="left-div">
+                我是左边的（浮动+百分比布局）
+        </div>
+        <div class="right-div">
+               我是右边的
+        </div>
+    </section>
+    <section class="demo2">
+        <div class="left-div">
+            我是左边的（flex布局+百分比布局）
+        </div>
+        <div class="right-div">
+            我是右边的
+        </div>
+    </section>
+    <section class="demo3">
+        <div class="left-div">
+            我是左边的（flex布局）
+        </div>
+        <div class="right-div">
+            我是右边的
+        </div>
+    </section>
+    <h3>
+         2.实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化
+    </h3>
+    <section class="demo4">
+        <div class="left-div">
+            我是左边的（浮动布局）
+        </div>
+        <div class="right-div">
+            我是右边的
+        </div>
+    </section>
+    <section class="demo5">
+        <div class="left-div">
+            我是左边的（flex布局）
+        </div>
+        <div class="right-div">
+            我是右边的
+        </div>
+    </section>
+    <section class="demo12">
+        <div class="left-div">
+            我是左边的（calc布局）
+        </div><div class="right-div">
+            我是右边的
+        </div>
+    </section>
+    <section class="demo13">
+        <div class="left-div">
+            我是左边的（定位布局）
+        </div><div class="right-div">
+            我是右边的
+        </div>
+    </section>
+    <section class="demo14">
+        <div class="left-div">
+            我是左边的（bfc布局）
+        </div><div class="right-div">
+            我是右边的
+        </div>
+    </section>
+    <section class="demo15">
+        <div class="left-div">
+            我是左边的（grad布局）
+        </div><div class="right-div">
+            我是右边的
+        </div>
+    </section>
+    <h3>
+         3.实现一个两栏布局，右侧固定宽度，左侧根据浏览器宽度进行自适应变化
+    </h3>
+    <section class="demo6">
+        <div class="right-div">
+            我是右边的
+        </div>
+        <div class="left-div">
+            我是左边的（浮动布局）
+        </div>
+    </section>
+    <section class="demo7">
+        <div class="left-div">
+            我是左边的（flex布局）
+        </div>
+        <div class="right-div">
+            我是右边的
+        </div>
+    </section>
+    <h3>
+         4.实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化
+    </h3>
+    <section class="demo8">
+            <div class="left-div">
+                我是左边的（浮动布局)
+            </div>
+            <div class="right-div">
+                我是右边的
+            </div>
+            <div class="center-div">
+                 我是中间的
+            </div>
+    </section>
+    <section class="demo9">
+            <div class="center-div">
+                <div class="content">
+                    我是中间的aaaaaaaaaa
+                </div>
+            </div>
+            <div class="left-div">
+                我是左边的（负边距布局)
+            </div>
+            <div class="right-div">
+                我是右边的
+            </div>     
+    </section>
+    <section class="demo11">
+        <div class="left-div">
+            我是左边的（定位)
+        </div>
+        <div class="center-div">
+            我是中间的
+        
+        </div>
+        <div class="right-div">
+            我是右边的
+        </div>
+    </section>
+    <h3>
+         5.实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化
+    </h3>
+    <section class="demo10">
+            <div class="left-div">
+                我是左边的（浮动布局)
+            </div>
+            
+            <div class="center-div">
+                 我是中间的
+            </div>
+            <div class="right-div">
+                我是右边的
+            </div>
+    </section>
+</body>
+</html>

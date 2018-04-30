@@ -1,0 +1,250 @@
+.clearfix::after {
+  content: '';
+  display: block;
+  overflow: hidden;
+  height: 0;
+  clear: both; }
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background: #2be72b;
+  padding-bottom: 200px; }
+
+nav {
+  display: flex;
+  justify-content: space-around; }
+  nav a {
+    display: block;
+    font-size: 28px;
+    color: #99d;
+    margin-top: 12px; }
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #fff; }
+
+h3 {
+  padding-left: 30px;
+  clear: both; }
+
+section {
+  margin: 20px 0; }
+
+.demo1 .left-div {
+  width: 30%;
+  background: #99d;
+  float: left;
+  height: 60px; }
+
+.demo1 .right-div {
+  width: 70%;
+  background: #cfc;
+  float: left;
+  height: 60px; }
+
+.demo2 {
+  display: flex; }
+  .demo2 .left-div {
+    width: 30%;
+    background: #99d;
+    height: 60px; }
+  .demo2 .right-div {
+    width: 70%;
+    background: #cfc;
+    height: 60px; }
+
+.demo3 {
+  display: flex; }
+  .demo3 .left-div {
+    flex: 3;
+    background: #99d;
+    height: 60px; }
+  .demo3 .right-div {
+    flex: 7;
+    background: #cfc;
+    height: 60px; }
+
+.demo4 .left-div {
+  width: 100px;
+  background: #99d;
+  height: 60px;
+  float: left; }
+
+.demo4 .right-div {
+  margin-left: 100px;
+  background: #cfc;
+  height: 60px; }
+
+.demo5 {
+  display: flex; }
+  .demo5 .left-div {
+    width: 100px;
+    background: #99d;
+    height: 60px; }
+  .demo5 .right-div {
+    background: #cfc;
+    height: 60px;
+    flex: 1 1 auto; }
+
+.demo6 .left-div {
+  background: #99d;
+  height: 60px;
+  margin-right: 100px; }
+
+.demo6 .right-div {
+  width: 100px;
+  float: right;
+  background: #cfc;
+  height: 60px; }
+
+.demo7 {
+  display: flex; }
+  .demo7 .left-div {
+    background: #99d;
+    height: 60px;
+    flex: 1 1 auto; }
+  .demo7 .right-div {
+    background: #cfc;
+    height: 60px;
+    width: 100px; }
+
+.demo8 .left-div {
+  background: #99d;
+  height: 60px;
+  width: 100px;
+  float: left; }
+
+.demo8 .center-div {
+  margin: 0 100px;
+  background: #fff;
+  height: 60px; }
+
+.demo8 .right-div {
+  float: right;
+  background: #cfc;
+  height: 60px;
+  width: 100px; }
+
+.demo9 {
+  height: 60px;
+  width: 100%; }
+  .demo9 .left-div {
+    background: #99d;
+    height: 60px;
+    width: 100px;
+    float: left;
+    margin-left: -100%; }
+  .demo9 .center-div {
+    background: #fff;
+    height: 60px;
+    float: left;
+    width: 100%; }
+    .demo9 .center-div .content {
+      padding: 0 100px; }
+  .demo9 .right-div {
+    float: left;
+    background: #cfc;
+    height: 60px;
+    width: 100px;
+    margin-left: -100px; }
+
+.demo10 .left-div {
+  background: #99d;
+  height: 60px;
+  width: 100px;
+  float: left; }
+
+.demo10 .center-div {
+  background: #fff;
+  height: 60px;
+  width: 100px;
+  float: left; }
+
+.demo10 .right-div {
+  margin-left: 200px;
+  background: #cfc;
+  height: 60px; }
+
+.demo11 {
+  position: relative;
+  height: 60px;
+  width: 100%; }
+  .demo11 .left-div {
+    background: #99d;
+    height: 60px;
+    position: absolute;
+    width: 100px;
+    left: 0;
+    top: 0; }
+  .demo11 .center-div {
+    background: #fff;
+    margin: 0 100px;
+    height: 60px; }
+  .demo11 .right-div {
+    background: #cfc;
+    position: absolute;
+    width: 100px;
+    right: 0;
+    top: 0;
+    height: 60px; }
+
+.demo12 .left-div {
+  width: 100px;
+  background: #99d;
+  height: 60px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box; }
+
+.demo12 .right-div {
+  box-sizing: border-box;
+  background: #cfc;
+  height: 60px;
+  display: inline-block;
+  width: calc(100% - 100px); }
+
+.demo13 {
+  position: relative;
+  height: 60px;
+  width: 100%; }
+  .demo13 .left-div {
+    background: #99d;
+    height: 60px;
+    position: absolute;
+    width: 100px;
+    left: 0;
+    top: 0; }
+  .demo13 .right-div {
+    background: #cfc;
+    margin-left: 100px;
+    height: 60px; }
+
+.demo14 {
+  overflow: auto; }
+  .demo14 .left-div {
+    background: #99d;
+    height: 60px;
+    width: 100px;
+    float: left; }
+  .demo14 .right-div {
+    background: #cfc;
+    height: 60px;
+    overflow: auto; }
+
+.demo15 {
+  display: grid;
+  grid-template-columns: 100px auto;
+  align-items: start; }
+  .demo15 .left-div {
+    background: #99d;
+    height: 60px;
+    box-sizing: border-box;
+    grid-column: 1; }
+  .demo15 .right-div {
+    background: #cfc;
+    height: 60px;
+    box-sizing: border-box;
+    grid-column: 2; }

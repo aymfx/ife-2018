@@ -1,0 +1,118 @@
+@mixin cf($c, $f) {
+    font-size: $f;
+    color: $c;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    height: 0;
+    clear: both;
+}
+
+.center {
+    width: 960px;
+    margin: 0 auto;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 80px;
+    background: #333;
+    section {
+        display: flex;
+        justify-content: space-between;
+        h1 {
+            margin: 0;
+            @include cf(#fff, 30px);
+            line-height: 80px;
+        }
+        nav {
+            padding-top: 10px;
+            a {
+                color: #fff;
+                &:hover {
+                    color: #f99;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    height: 300px;
+    background: #66bb33;
+    nav {
+        float: right;
+        margin-top: 240px;
+        height: 52px; // overflow: hidden;
+        // background: #f99;
+        span {
+            display: inline-block;
+            height: 38px;
+            margin-top: 12px;
+            border: 1px solid #335e1a;
+            padding: 0 10px;
+            font-size: 12px;
+            line-height: 38px;
+            background: #b2dd99;
+            &.active {
+                height: 50px;
+                margin-top: 0;
+                background: #fff;
+                line-height: 60px;
+            }
+        }
+    }
+}
+
+main {
+    .wrap-nav {
+        height: 70px;
+        border: 1px solid #dddddd;
+        nav.center {
+            display: flex;
+            a {
+                margin-top: 20px;
+                height: 48px;
+                line-height: 48px;
+                padding: 0 22px;
+                display: inline-block;
+                border: 1px solid #ddd;
+                border-radius: 12px 12px 0 0;
+                &.active {
+                    border-bottom-color: #fff;
+                    margin-top: 21px;
+                }
+            }
+        }
+    }
+    section {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        div {
+            padding: 80px 60px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            flex: 1;
+        }
+    }
+    padding-bottom: 140px;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 120px;
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,308 @@
+@mixin cf($c, $f) {
+    font-size: $f;
+    color: $c;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    height: 0;
+    clear: both;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background: rgb(43, 231, 43);
+    padding-bottom: 200px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    a {
+        display: block;
+        @include cf(#99d, 28px);
+        margin-top: 12px;
+    }
+}
+
+h1 {
+    text-align: center;
+    @include cf(#fff, 36px)
+}
+
+h3 {
+    padding-left: 30px;
+    clear: both;
+}
+
+section {
+    margin: 20px 0;
+}
+
+.demo1 {
+    .left-div {
+        width: 30%;
+        background: #99d;
+        float: left;
+        height: 60px;
+    }
+    .right-div {
+        width: 70%;
+        background: #cfc;
+        float: left;
+        height: 60px;
+    }
+}
+
+.demo2 {
+    display: flex;
+    .left-div {
+        width: 30%;
+        background: #99d;
+        height: 60px;
+    }
+    .right-div {
+        width: 70%;
+        background: #cfc;
+        height: 60px;
+    }
+}
+
+.demo3 {
+    display: flex;
+    .left-div {
+        flex: 3;
+        background: #99d;
+        height: 60px;
+    }
+    .right-div {
+        flex: 7;
+        background: #cfc;
+        height: 60px;
+    }
+}
+
+.demo4 {
+    .left-div {
+        width: 100px;
+        background: #99d;
+        height: 60px;
+        float: left;
+    }
+    .right-div {
+        margin-left: 100px;
+        background: #cfc;
+        height: 60px;
+    }
+}
+
+.demo5 {
+    display: flex;
+    .left-div {
+        width: 100px;
+        background: #99d;
+        height: 60px;
+    }
+    .right-div {
+        background: #cfc;
+        height: 60px;
+        flex: 1 1 auto;
+    }
+}
+
+.demo6 {
+    .left-div {
+        background: #99d;
+        height: 60px;
+        margin-right: 100px;
+    }
+    .right-div {
+        width: 100px;
+        float: right;
+        background: #cfc;
+        height: 60px;
+    }
+}
+
+.demo7 {
+    display: flex;
+    .left-div {
+        background: #99d;
+        height: 60px;
+        flex: 1 1 auto;
+    }
+    .right-div {
+        background: #cfc;
+        height: 60px;
+        width: 100px;
+    }
+}
+
+.demo8 {
+    .left-div {
+        background: #99d;
+        height: 60px;
+        width: 100px;
+        float: left;
+    }
+    .center-div {
+        margin: 0 100px;
+        background: #fff;
+        height: 60px;
+    }
+    .right-div {
+        float: right;
+        background: #cfc;
+        height: 60px;
+        width: 100px;
+    }
+}
+
+.demo9 {
+    height: 60px;
+    width: 100%;
+    .left-div {
+        background: #99d;
+        height: 60px;
+        width: 100px;
+        float: left;
+        margin-left: -100%;
+    }
+    .center-div {
+        background: #fff;
+        height: 60px;
+        float: left;
+        width: 100%;
+        .content {
+            padding: 0 100px;
+        }
+    }
+    .right-div {
+        float: left;
+        background: #cfc;
+        height: 60px;
+        width: 100px;
+        margin-left: -100px;
+    }
+}
+
+.demo10 {
+    .left-div {
+        background: #99d;
+        height: 60px;
+        width: 100px;
+        float: left;
+    }
+    .center-div {
+        background: #fff;
+        height: 60px;
+        width: 100px;
+        float: left;
+    }
+    .right-div {
+        margin-left: 200px;
+        background: #cfc;
+        height: 60px;
+    }
+}
+
+.demo11 {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    .left-div {
+        background: #99d;
+        height: 60px;
+        position: absolute;
+        width: 100px;
+        left: 0;
+        top: 0;
+    }
+    .center-div {
+        background: #fff;
+        margin: 0 100px;
+        height: 60px;
+    }
+    .right-div {
+        background: #cfc;
+        position: absolute;
+        width: 100px;
+        right: 0;
+        top: 0;
+        height: 60px;
+    }
+}
+
+.demo12 {
+    .left-div {
+        width: 100px;
+        background: #99d;
+        height: 60px;
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+    }
+    .right-div {
+        box-sizing: border-box;
+        background: #cfc;
+        height: 60px;
+        display: inline-block;
+        width: calc(100% - 100px);
+    }
+}
+
+.demo13 {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    .left-div {
+        background: #99d;
+        height: 60px;
+        position: absolute;
+        width: 100px;
+        left: 0;
+        top: 0;
+    }
+    .right-div {
+        background: #cfc;
+        margin-left: 100px;
+        height: 60px;
+    }
+}
+
+.demo14 {
+    overflow: auto;
+    .left-div {
+        background: #99d;
+        height: 60px;
+        width: 100px;
+        float: left;
+    }
+    .right-div {
+        background: #cfc;
+        height: 60px;
+        overflow: auto;
+    }
+}
+
+.demo15 {
+    display: grid;
+    grid-template-columns: 100px auto;
+    align-items: start;
+    .left-div {
+        background: #99d;
+        height: 60px;
+        box-sizing: border-box;
+        grid-column: 1;
+    }
+    .right-div {
+        background: #cfc;
+        height: 60px;
+        box-sizing: border-box;
+        grid-column: 2;
+    }
+}
