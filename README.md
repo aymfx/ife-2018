@@ -12,7 +12,7 @@
 
 > 第五、六天：三种简历     代码地址:http://www.aymfx.cn/ife-2018/three_resume/resume.html
 
-> 第五、六天：三种简历     代码地址:http://www.aymfx.cn/ife-2018/three_resume/resume.html
+> 第七、八天：各种布局     代码地址:http://www.aymfx.cn/ife-2018/layout/index.html
 
 
 ### MVVM学院
