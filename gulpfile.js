@@ -1,7 +1,7 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
 const babel = require("gulp-babel"); 
-const baseUrl = "layout";
+const baseUrl = "beautiful_web";
 const inputcss = './docs/' + baseUrl + '/commons/css/*.scss';
 const inputjs = './docs/' + baseUrl + '/commons/js/*.js';
 const inputimg = './docs/' + baseUrl + '/commons/images/*';
