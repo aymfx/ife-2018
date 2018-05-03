@@ -1,7 +1,10 @@
 <template>
-    <div class="hello">hello {{msg}}</div>
-    <p>项目地址:<a href='https://github.com/aymfx/ife-2018/tree/master/projects/san-helloWorld'>san-helloWorld</a></p>
-    <p>我的博客地址<a href='http://www.aymfx.cn/'>san-helloWorld</a></p>
+    <section>
+        <div class="hello">hello {{msg}}</div>
+        <p>项目地址:<a href='https://github.com/aymfx/ife-2018/tree/master/projects/san-helloWorld'>san-helloWorld</a></p>
+        <p>我的博客地址<a href='http://www.aymfx.cn/'>san-helloWorld</a></p>
+    </section>
+
 </template>
 
 <script>
