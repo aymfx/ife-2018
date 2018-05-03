@@ -1,0 +1,20 @@
+<template>
+    <div class="hello">hello {{msg}}</div>
+    <p>项目地址</p>
+</template>
+
+<script>
+    export default {
+        initData () {
+            return {
+                msg: 'world'
+            };
+        }
+    }
+</script>
+
+<style>
+    .hello {
+        color: blue;
+    }
+</style>

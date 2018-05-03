@@ -1,0 +1,7 @@
+body{
+    background: #99f;
+}
+.hello {
+    color: red;
+    background: url('./Photo2.png') no-repeat;
+}

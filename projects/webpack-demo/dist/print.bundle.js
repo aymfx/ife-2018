@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{4:function(e,o,n){"use strict";n.r(o),o.default=(()=>{console.log('Button Clicked: Here\'s "some text"!')})}}]);
