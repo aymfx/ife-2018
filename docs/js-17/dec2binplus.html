@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+</head>
+
+<body>
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+    <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
+    <button id="trans-btn">转化为二进制</button>
+    <p id="result">运算结果</p>
+    <script>
+
+        document.getElementById('trans-btn').onclick = function () {
+                document.getElementById('result').innerHTML = '运算结果:' + addWidth();
+            }
+            function dec2bin(num) {
+                if (isNaN(parseInt(num)) || num * 1 < 0) {
+                    alert('输入的数字不正确');
+                    return '有误呀';
+                }
+                let n;
+                // debugger;
+                if (num % 2 == 0) {
+                    n = '0';
+
+                } else if (num % 2 == 1) {
+                    n = '1'
+                }
+                num = Math.floor(num / 2);
+                if (num == 0) {
+                    return n.valueOf();
+                }
+                return dec2bin(num) + n;
+            }
+            //增加宽度函数
+            function addWidth(){
+                let num = document.getElementById('bin-bit').value;
+                let value = dec2bin(parseInt(document.getElementById('dec-number').value));
+                num  = num*1 -value.length;
+                if(num<0){
+                    console.error('宽度小于自身了');
+                }else{
+                   return '0'.repeat(num)+value;
+                }
+                return value;
+                
+            }
+// 新的需求是，转化显示后的二进制数为bin-bit中输入的数字宽度，例如
+// dec-number为5，bin-bit为5，则转化后数字为00101
+// 如果bin-bit小于转化后的二进制本身位数，则使用原本的位数，如dec-number为5，bin-bit为2，依然输出101，但同时在console中报个错
+// Some coding
+
+    </script>
+</body>
+
+</html>

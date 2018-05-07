@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="tips">
+
+    </p>
+    <script>
+        function getnow(){
+            let hours = (new Date()).getHours();
+            let info = document.getElementById('tips')
+            console.log(hours);
+            if(hours>=0 && hours<6){
+                info.innerHTML = '现在还是凌晨，欢迎光临'
+            }else if(hours >= 6 && hours < 8){
+                info.innerHTML = '早上好，好好吃早餐'
+            }else if(hours >= 8 && hours < 12){
+                info.innerHTML = '上午好,加油工作呀'
+            }
+            else if(hours >= 12 && hours < 14){
+                info.innerHTML = '中午好，午睡了吗？'
+            }
+            else if(hours >= 14 && hours < 19){
+                info.innerHTML = '下午好，要认真工作了哦？'
+            }
+            else if(hours >= 19 && hours < 22){
+                info.innerHTML = '晚上好，可以来吃鸡了'
+            }
+            else if(hours >= 22 && hours < 24){
+                info.innerHTML = '晚安，明天又是新的一天'
+            }
+
+        }
+        getnow();
+    </script>
+</body>
+</html>
