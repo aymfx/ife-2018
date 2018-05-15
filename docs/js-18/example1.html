@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="news-top" class="section">
+            <h3>Some title</h3>
+            <div class="content">
+                <ul>
+                    <li>
+                        <span>HTML</span>
+                        <a href="">Some Link1</a>
+                    </li>
+                    <li>
+                        <span>JS</span>
+                        <a class="active" href="">Some Link2</a>
+                    </li>
+                    <li>
+                        <span>CSS</span>
+                        <a href="">Some Link3</a>
+                    </li>
+                    <li>
+                        <span>JS</span>
+                        <a href="">Some Link4</a>
+                    </li>
+                </ul>
+            </div>
+            <img src="">
+            <p class="">Some Text</p>
+        </div>
+        <div id="news-normal" class="section">
+            <h3>Some title</h3>
+            <div class="content">
+                <ul>
+                    <li>
+                        <span>HTML</span>
+                        <a href="">Some Link1</a>
+                    </li>
+                    <li>
+                        <span>HTML</span>
+                        <a href="">Some Link2</a>
+                    </li>
+                    <li>
+                        <span>JS</span>
+                        <a class="active" href="#">Some Link3</a>
+                    </li>
+                    <li>
+                        <span>CSS</span>
+                        <a href="">Some Link4</a>
+                    </li>
+                </ul>
+            </div>
+            <img src="">
+            <p class="">Some Text</p>
+        </div>
+    </div>
+    <script>
+        function getAllListItem() {
+            // 返回页面中所有li标签
+            const liItmes = document.getElementsByTagName('li');
+            console.log(liItmes);
+            return liItmes;
+        }
+
+        function findAllHtmlSpanInOneSection(sectionId) {
+            // 返回某个section下所有span中内容为HTML的span标签
+            const section = document.getElementById(sectionId);
+            const spanlist = section.getElementsByTagName('span');
+            return spanlist;
+        }
+
+        function findListItem(sectionId, spanCont) {
+            // 返回某个section下，所有所包含span内容为spanCont的LI标签
+            const section = document.getElementById(sectionId);
+            const list = section.getElementsByTagName('ul')[0].childNodes;
+            const arr = [];
+            Array.from(list).map((element)=>{
+                if(element.nodeName.toUpperCase()==='LI'){
+                   Array.prototype.slice.call(element.childNodes).map(childele =>{
+                if(childele.nodeName.toUpperCase()==='SPAN' && childele.innerText.toUpperCase() == spanCont.toUpperCase()){
+                                arr.push(element);
+                        }
+                   })
+                }
+            })
+                console.log(arr);
+                return arr;
+        }
+
+        function getActiveLinkContent(sectionId) {
+            // 返回某个section下，class为active的链接中包含的文字内容
+            const section = document.getElementById(sectionId);
+            const list = section.getElementsByTagName('ul')[0].childNodes;
+            const arr = [];
+            Array.from(list).map((element) => {
+                if (element.nodeName.toUpperCase() === 'LI') {
+                    Array.prototype.slice.call(element.childNodes).map(childele => {
+                        // debugger;
+        if (childele.nodeName.toUpperCase() === 'A' && childele.getAttribute('class')) {
+                    if(childele.getAttribute('class')){
+                        arr.push(element);
+                    }
+                        }
+                    })
+                }
+            })
+            return arr;
+        } 
+            getActiveLinkContent('news-normal')
+    </script>
+</body>
+
+</html>
