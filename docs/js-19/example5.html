@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 480px;
+            height: 480px;
+            overflow: hidden;
+            position: relative;
+            border: 1px springgreen solid;
+            background: url(./header.jpg) no-repeat 0 0;
+            background-position-y: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+    </div>
+    <script>
+        let num = 0;
+        let timer = null;
+        let flag = 0;
+        let Obj = document.querySelector('.wrap')
+        timer = setInterval(() => {
+            Obj.style.cssText = "background-position-y:-" + num * 480 + 'px;';
+            if (flag == 0) {
+                num++;
+            } else {
+                num--;
+            }
+
+            if (num == 16) {
+                flag = 1;
+            }
+            if (num == 0) {
+                flag = 0;
+            }
+        }, 100)
+    </script>
+</body>
+
+</html>
