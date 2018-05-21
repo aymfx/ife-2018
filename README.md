@@ -30,6 +30,8 @@
 
 > 第四次js编程     代码地址:http://www.aymfx.cn/ife-2018/js-19/index.html
 
+> 第五次js编程     代码地址:http://www.aymfx.cn/ife-2018/js-20/index.html
+
 ### MVVM学院
 > 任务一:写一个hello world   代码地址: http://www.aymfx.cn/ife-2018/san-hellowld/index.html
 ### 设计师学院
