@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        function getDay(date) {
+            let arr = ['sunday', 'Monday', 'Tuesday ', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            return arr[date.getDay()];
+        }
+
+        function AmOrPm(hour) {
+                if(hour<12){
+                    return 'am'
+                }
+                return 'pm'
+        }
+
+        function addzero(n) {
+            return n < 10 ? '0' + n : n;
+        }
+
+        function getTime() {
+            let now = new Date();
+            let year = now.getFullYear();
+            let month = addzero(now.getMonth() + 1);
+            let day = now.getDate();
+            let week = getDay(now);
+            let hour = addzero(now.getHours());
+            let min = addzero(now.getMinutes());
+            let second = addzero(now.getSeconds());
+            document.getElementById('result').innerHTML = year + '-' + month + '-' + day + ' ' + week + hour + ':' +
+ min + ':' + second +' '+ AmOrPm(hour);
+        }
+        setInterval(getTime, 1000);
+    </script>
+</body>
+
+</html>

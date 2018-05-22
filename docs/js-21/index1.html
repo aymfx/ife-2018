@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        function getDay(date) {
+            let arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            return arr[date.getDay()];
+        }
+
+        function addzero(n) {
+            return n < 10 ? '0' + n : n;
+        }
+
+        function getTime() {
+            let now = new Date();
+            let year = now.getFullYear();
+            let month = addzero(now.getMonth()+1);
+            let day  = now.getDate();
+            let week = getDay(now);
+            let hour = addzero(now.getHours());
+            let min = addzero(now.getMinutes());
+            let second = addzero(now.getSeconds());
+            document.getElementById('result').innerHTML = year + '年' + month + '月' + day + '日' + week + hour + ':' + min + ':' + second;
+        }
+        setInterval(getTime,1000);
+    </script>
+</body>
+
+</html>
