@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第二十八天到第三十天 给爱的人发个邮件吧</title>
+    <style>
+        #email-input {
+            width: 150px;
+            height: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #email-sug-wrapper {}
+
+        ul {
+            margin: 0;
+            padding: 0;
+            width: 154px;
+
+            font-size: 12px;
+            line-height: 20px;
+            display: none;
+            list-style-type: none;
+        }
+
+        ul li {
+            padding-left: 18px;
+            box-sizing: border-box;
+            height: 20px;
+            width: 154px;
+            margin: 0;
+            color: #aaaaaa;
+        }
+
+        li:hover {
+            background: #b1d9e3;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <input id="email-input" type="text">
+        <ul id="email-sug-wrapper" class="email-sug">
+
+        </ul>
+    </div>
+    <script>
+        // 邮箱后缀List参考 
+        const postfixList = ['@163.com', '@gmail.com', '@126.com', '@qq.com', '@263.net'];
+        let oUl = document.getElementById('email-sug-wrapper');
+        let olis = oUl.getElementsByTagName('li');
+        let Oinput = document.getElementById('email-input');
+
+
+
+
+        function initPane() {
+            getLiList();
+            binevent();
+
+        }
+
+        function binevent() {
+            oUl.addEventListener('click', function (ev) {
+                ev = ev || window.event;
+                let target = ev.target || ev.srcElement;
+                if (target.nodeName.toLowerCase() == 'li') {
+                    alert(target.innerHTML);
+                }
+            })
+            Oinput.addEventListener('keyup', function () {
+
+                if (this.value.trim().length > 0) {
+                    oUl.style.display = 'block';
+                }else{
+                    oUl.style.display = 'none';
+                }
+                getLiList(this.value);
+            })
+        }
+
+        function getLiList(str = '') {
+            let domlist = ''
+            postfixList.map((item) => {
+                domlist += `<li>${str}<span>${item}</span></li>`
+            })
+            oUl.innerHTML = domlist;
+        }
+        initPane()
+    </script>
+</body>
+<script>
+</script>
+
+</html>
