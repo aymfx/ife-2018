@@ -90,10 +90,16 @@
         //生成提示框中的提示内容
         function getLiList(str = '') {
             let domlist = ''
+            console.log(str.includes('@'));
+            if (str.includes('@')) {
+                str = str.slice(0,str.indexOf('@'));
+            }
+            console.log(str)
             postfixList.map((item) => {
                 domlist += `<li>${str}<span>${item}</span></li>`
             })
             oUl.innerHTML = domlist;
+
         }
         initPane()
     </script>
